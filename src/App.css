@@ -1,38 +1,307 @@
-.App {
-  text-align: center;
+body{
+width: 100%;
+margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li{
+list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav{
+z-index: 10001;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar{
+padding: 10px 13%;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li{
+display: inline-block;
+padding: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul li a{
+text-decoration: none;
+color: #000;
 }
+
+nav ul li a:hover{
+color: rgb(102, 181, 215);
+}
+
+.menu-icon{
+display: none;
+cursor: pointer;
+color: #000;
+}
+
+.bar{
+width: 20px;
+height: 3px;
+background-color: #000;
+margin: 5px;
+}
+
+.nav-links{
+list-style: none;
+display: flex;
+align-items: center;
+}
+
+.nav-links.visible{
+flex-direction: column;
+position:absolute;
+top: 40px;
+right: 0;
+width: 100%;
+background-color:#495E57;
+display: flex;
+flex-direction: column;
+align-items: center;
+transition: all 0.5s ease-in-out;
+}
+
+/*header section*/
+
+.header {
+background-color: #495E57;
+padding: 40px 0;
+}
+
+.header section{
+color:#EDEFEE;
+padding: 10px 13%;
+position: relative;
+}
+
+h2 {
+color: #F4CE14;
+font-size: 40px;
+}
+
+h3 {
+font-size: 20px;
+}
+
+button {
+background-color: #F4CE14;
+color: #EDEFEE;
+padding: 10px 20px;
+border: none;
+text-decoration: none;
+border-radius: 12px;
+font-size: 20px;
+font-weight: bold;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #6cb28f;
+color: #F4CE14;
+}
+
+.banner-img {
+position: absolute;
+right: 13%;
+top: 15%;
+width: 400px;
+}
+
+.banner-img img { 
+width: 100%;
+height: auto;
+border-radius: 20px;
+}
+
+form, comfirm{
+padding: 10px 13%;
+}
+
+.formField{
+padding: 50px 20px;
+}
+
+input, label{
+display:inline-block;
+margin-right: 20px;
+margin-bottom: 20px;
+}
+
+#book-date, #book-time, #book-guests, #book-occasion{
+background: #bdbdbd43;
+padding: 8px 24px;
+border: none;
+outline: none;
+border-radius: 2px;
+}
+
+.btnReceive input{
+padding: 10px 15px;
+margin-top: 20px;
+background: #495E57;
+border: none;
+color: #EDEFEE;
+border-radius: 5px;
+}
+
+.confirm span{
+color: blueviolet ;
+}
+
+/*menu items*/
+
+menut-container{
+margin: 110px auto;
+padding: 10px 13%;
+}
+
+.menu-container h2{
+  color: #F4CE14;
+}
+
+.menu-header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.cards{
+margin-top: 30px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 2rem 1rem;
+}
+
+.menu-items{
+/*height: 300px;*/
+width: 300px;
+background: #495E57;
+border-radius: 10px;
+}
+
+.menu-container img{
+width: 100%;
+height: auto;
+border-radius: 10px;
+}
+
+.menu-content{
+padding: 5px 15px;
+}
+
+.menu-content .heding{
+display: flex;
+justify-content: space-between;
+}
+
+.orderbtn{
+padding: 5px 14px;
+margin-bottom: 10px;
+font-size: 16px;
+font-weight: bold;
+}
+
+footer section{
+padding: 10px 13%;
+display: flex;
+justify-content: space-between;
+align-items: start;
+}
+
+.company-info img{
+margin-top: 20px;
+cursor: pointer;
+width: 300px;
+}
+
+.company-info p{ 
+width: 300px;
+}
+
+footer h3{
+font-size: 20px;
+}
+
+footer ul{
+padding: 0;
+}
+
+footer ul li{
+padding: 5px 0;
+}
+
+@media screen and (max-width: 768px){
+.menu-icon{
+display: block;
+}  
+
+.nav-links{
+display: none;
+}
+
+.nav-links.visible{
+display: flex;
+background:#333333;
+z-index: 1000;
+padding: 10px 0;
+}
+
+.navbar{
+background: #fff;
+padding: 10px 10px;
+}
+
+nav ul li a{
+color: #fff;
+}
+
+.bar{background: #333333;
+}
+
+.banner-img{
+display: none;
+}
+
+form, comfirm{
+padding: 10px 10px;
+}
+
+.header section, .menu-container{
+padding: 10px 10px;
+}
+
+.menu-container{
+margin: 20px 0;
+}
+
+.menu-header{
+justify-content: flex-start;
+}
+
+.menu-items{
+width: 100%;
+}
+
+footer section{
+padding: 10px 10px;
+flex-direction: column;
+}
+
+.company-info p{
+width: 100%;
+}
+
+}
+
+.hidden{
+display: none;
+}
+
+
+
+
